@@ -18,7 +18,11 @@ def get_chrome_driver_path():
     elif len(chrome_driver_path) == 0:
         raise ValueError('There is no chrome driver in project root path.')
     else:
-        raise ValueError('There are more than one chrome driver in project root path.')
+        raise ValueError(
+            'There are more than one chrome driver in project root path.')
 
 
-chrome = webdriver.Chrome(get_chrome_driver_path())
+def run_chrome():
+    return webdriver.Chrome(get_chrome_driver_path())
+
+chrome = run_chrome()
