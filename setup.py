@@ -1,6 +1,4 @@
-from selenium import webdriver
-from case.get_title import get_title
-
-chrome = webdriver.Chrome('./chromedriver.79')
+from case.www_python_org.get_title import get_title
+from driver.chrome.instance import chrome
 
 get_title(chrome)
