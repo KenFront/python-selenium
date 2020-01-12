@@ -130,6 +130,7 @@ dmypy.json
 
 # web driver
 chromedriver.*
+firefoxdriver.*
 
 # mac
 **/.DS_Store

@@ -1,8 +1,15 @@
-from case.www_python_org.get_title import get_title
 from driver.chrome.instance import chrome
+from driver.firefox.instance import firefox
+from case.www_python_org.check_browser_title import check_browser_title
 
-# task list
-get_title(chrome)
+# chrome task list
+check_browser_title(chrome)
 
-# close browser
+# close chrome
 chrome.quit()
+
+# firefox task list
+check_browser_title(firefox)
+
+# close firefox
+firefox.quit()
