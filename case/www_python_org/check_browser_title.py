@@ -1,7 +1,9 @@
 import time
+from selenium.webdriver.chrome.webdriver import WebDriver
 from constants.paths import report_path
 
-def check_browser_title(browser):
+
+def check_browser_title(browser: WebDriver):
     try:
         browser.get('https://www.python.org/')
         assert 'Python' in browser.title
