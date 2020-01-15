@@ -1,6 +1,7 @@
 install:
-		pip3 install -r ./requirements.txt
-clean-reports:
-		rm -rf -d ./reports/*.png
+	pip3 install -r ./requirements.txt
+clear-reports:
+	rm -rf -d ./reports/*.png
 start:
-		python3 setup.py
+	make clear-reports
+	python3 setup.py
