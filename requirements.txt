@@ -1,5 +1,4 @@
 pip==19.3.1
-wheel==0.33.6
 selenium==3.141.0
 pylint==2.4.4
 autopep8==1.4.4
