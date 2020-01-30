@@ -5,3 +5,5 @@ clear-reports:
 start:
 	make clear-reports
 	python3 setup.py
+test:
+	pytest
