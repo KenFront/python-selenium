@@ -1,14 +1,13 @@
-from selenium.webdriver.chrome.webdriver import WebDriver
 from case.shopee_tw.pages import page_index
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.by import By
-from utils.exceptions import save_screenshot_by_timestamp
+from case.browser_list import browser_list
 
 
-def search_goods(browser: WebDriver):
-    try:
+def test_search_goods():
+    for browser in browser_list:
         search_word = "筆電"
         browser.get(page_index)
 
@@ -23,5 +22,3 @@ def search_goods(browser: WebDriver):
                 (By.CSS_SELECTOR, ".container > div[role='main']"))
         )
         assert search_word in browser.title
-    except AssertionError:
-        save_screenshot_by_timestamp(browser)

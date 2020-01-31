@@ -2,7 +2,7 @@ from os import listdir
 from re import match
 
 
-def get_driver_path(file_name):
+def get_driver_path(file_name: str):
 
     def find_driver_by_file_name(file_name):
         def match_file_name(variable):
