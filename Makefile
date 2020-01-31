@@ -4,4 +4,4 @@ clear-reports:
 	rm -rf -d ./reports/*.png
 test:
 	make clear-reports
-	pytest --maxfail=0
+	pytest -s --maxfail=0
