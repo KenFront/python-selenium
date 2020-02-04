@@ -28,5 +28,5 @@ make install
 - run
 
 ```
-make start
+make run-all-test
 ```

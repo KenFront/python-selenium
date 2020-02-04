@@ -1,13 +1,11 @@
-from driver.chrome.instance import run_chrome
-from driver.firefox.instance import run_firefox
-from case.browser_list import browser_list
+from dotenv import load_dotenv
+from test.browser_list import get_browser_list
 
 
 def pytest_sessionstart():
-    browser_list.append(run_chrome())
-    browser_list.append(run_firefox())
+    load_dotenv(dotenv_path='.env')
 
 
 def pytest_sessionfinish():
-    for browser in browser_list:
+    for browser in get_browser_list():
         browser.quit()
