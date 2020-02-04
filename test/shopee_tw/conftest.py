@@ -1,5 +1,5 @@
-# from case.shopee_tw.test.login import login
+from test.shopee_tw.case.login import login
 
 
-# def pytest_runtestloop():
-    # login()
+def pytest_runtestloop():
+    login()

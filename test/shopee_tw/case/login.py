@@ -27,11 +27,10 @@ def login():
             css_selector.LOGIN_POP_PASSWORD)
         login_pop_account_input.send_keys(os.getenv('shopee_tw_account'))
         login_pop_password_input.send_keys(os.getenv('shopee_tw_password'))
-        login_pop_submit_btn = browser.find_element_by_css_selector(
-            css_selector.LOGIN_POP_SUBMIT_BTN)
-        login_pop_submit_btn.click()
 
-        nav_user_info = WebDriverWait(browser, 10).until(
+        # need wait for input SMS code manually.
+
+        nav_user_info = WebDriverWait(browser, 60).until(
             EC.presence_of_element_located(
                 (By.CSS_SELECTOR, css_selector.NAV_USER_INFO))
         )
