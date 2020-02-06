@@ -1,1 +1,3 @@
 **/*.png
+assets
+test_results.html
